@@ -64,7 +64,7 @@ public class MainActivity extends ActionBarActivity {
                 tv.setText(checktxt);
 
                 try {
-                    InputStream ist = as.open("images/HelloWorld.png");
+                    InputStream ist = as.open("images/atariken0001.jpg");
                     bmp = BitmapFactory.decodeStream(ist);
                     iv.setImageBitmap(bmp);
                 } catch (IOException e) {
@@ -92,10 +92,7 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    private void prepareTrainedFileIfNotExist() throws Exception {
-
-        // MEMO : Manifestの android.permission.WRITE_EXTERNAL_STORAGEを忘れずに
-
+    private void prepareTrainedFileIfNotExist () throws Exception{
         String paths[] = {EXSTORAGE_PATH, EXSTORAGE_PATH + "tessdata"};
 
         for (String path : paths) {
